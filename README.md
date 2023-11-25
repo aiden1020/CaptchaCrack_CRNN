@@ -1,4 +1,3 @@
-# CaptchaCrack_CRNN
 # Captcha CRNN Model Build + CTC Loss
 
 Tags: CNN, Captcha Cracker, LSTM, Pytorch
