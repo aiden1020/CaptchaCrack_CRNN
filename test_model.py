@@ -93,7 +93,7 @@ def test(state_dict_path, image_path, label):
     print("Predict Label :", predicted_label)
 
 
-image_path = 'Dataset/10.png'
+image_path = 'target_dataset/3.png'
 state_dict_path = 'best-model-parameters.pt'
-label = '1234'
+label = '4159'
 test(state_dict_path, image_path, label)
