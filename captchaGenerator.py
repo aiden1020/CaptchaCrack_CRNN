@@ -14,7 +14,7 @@ def captchaGen(labelCSV, imgOutput_path, imgNum):
         writer.writerow(['path', 'label'])
 
         for i in range(imgNum):
-            width, height = 120, 32  # get width and height by target.png
+            width, height = 120, 36  # get width and height by target.png
 
             # get gray background randomly
             gray_intensity = random.randint(200, 220)
@@ -37,11 +37,11 @@ def captchaGen(labelCSV, imgOutput_path, imgNum):
 
             # random offset for placing captcha
             x_offset = random.randint(5, 8)
-            y_offset = random.randint(0, 0)
+            y_offset = random.randint(1, 4)
 
             for char in captcha:
-                font_path = "/System/Library/Fonts/Apple Chancery.ttf"
-                font_size = 25  # random font size
+                font_path = "/System/Library/Fonts/HelveticaNeue.ttc"
+                font_size = random.randint(29, 31)  # random font size
                 font = ImageFont.truetype(font_path, font_size)
 
                 # random text color
@@ -49,7 +49,7 @@ def captchaGen(labelCSV, imgOutput_path, imgNum):
                     0, 255), random.randint(0, 255))
 
                 # random bold font
-                stroke_width = 0
+                stroke_width = random.randint(0, 1)
 
                 draw.text((x_offset, y_offset), char, font=font,
                           fill=text_color, stroke_width=stroke_width)
